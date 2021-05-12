@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href= "http://static.tlmworks.org/wgets/dangerous/maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <!-- Bootstrap -->
+    <!-- <link rel="stylesheet" href="http://static.tlmworks.org/track_1.0/cdns/bootstrap-4/css/bootstrap-4.1.3.min.css"> -->
+    <!-- My CSS file -->
+    <link rel="stylesheet" href="css/slotmachine.css">
+    <title>Slot Machine</title>
+</head>
+
+<body id="bdy">
+    <div id="theContainer" class="d-flex justify-content-center">
+<!-- The Machine -->
+        <div id="page" class="container align-self-center px-0">
+            <div id="gameTop" class="d-flex justify-content-around text-center py-lg-2 px-0">
+                <div id="soundOnOff">
+                    <img class="soundOn" src="./slot_images/volumeOn.png" alt="volumeOn">
+                    <img class="soundOff" src="./slot_images/volumeOff.png" alt="volumeOff">
+                    <p>Sound</p>
+                </div>
+
+                <h1 id="slt" class="align-self-center">Penny Slots!!!</h1>
+
+                <div id="effectsOnOff">
+                    <img class="effectOn" src="./slot_images/volumeOn.png" alt="volumeOn">
+                    <img class="effectOff" src="./slot_images/volumeOff.png" alt="volumeOff">
+                    <p>Effects</p>
+                </div>
+            </div><!-- Top Of Machine -->
+
+            <section id="game" class="pt-5">
+<!-- Reels on the game face -->
+                <div id="reels" class="d-flex flex-wrap no-gutters">
+                    <div id="reel1Cont" class="reelContents col-4 text-center border border-danger py-1 img-fluid"><img class="reel1 img-fluid rounded h-100" src="./slot_images/bar.png" alt="reel#1"></div><!-- Top Left Image reel#1 -->
+
+                    <div id="reel2Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel2 img-fluid rounded h-100" src="./slot_images/bar.png" alt="reel#2"></div><!-- Top Middle Image reel#2 -->
+
+                    <div id="reel3Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel3 img-fluid rounded h-100"src="./slot_images/bar.png" alt="reel#3"></div><!-- Top Right Image reel#3 -->
+
+                    <div id="reel4Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel4 img-fluid rounded h-100"src="./slot_images/seven.png" alt="reel#4"></div><!-- Left Middle Image reel#4 -->
+
+                    <div id="reel5Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel5 img-fluid rounded h-100"src="./slot_images/seven.png" alt="reel#5"></div><!-- Middle Middle Image reel#5 -->
+
+                    <div id="reel6Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel6 img-fluid rounded h-100"src="./slot_images/seven.png" alt="reel#6"></div><!-- Right Middle Image reel#6 -->
+
+                    <div id="reel7Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel7 img-fluid rounded h-100"src="./slot_images/diamond.png" alt="reel#7"></div><!-- Left Bottom Image reel#7 -->
+
+                    <div id="reel8Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel8 img-fluid rounded h-100"src="./slot_images/diamond.png" alt="reel#8"></div><!-- Bottom Middle Image reel#8 -->
+
+                    <div id="reel9Cont" class="reelContents col-4 text-center border border-danger py-1"><img class="reel9 img-fluid rounded h-100"src="./slot_images/diamond.png" alt="reel#9"></div><!-- Right Bottom Image reel#9 -->
+                </div><!-- Reels -->
+<!-- Game holding inormation of the betting -->
+                <div class="d-flex">
+                    <div class="w-25 text-center border-right pt-2">
+                        <h3 class="credits numbers">500</h3>
+                        <p class="border-top label">Credits</p>
+                    </div><!-- Players Money -->
+
+                    <div class="w-25 text-center border-right pt-2">
+                        <h3 class="bet numbers">0</h3>
+                        <p class="border-top label">Bet</p>
+                    </div><!-- Bet Amount -->
+
+                    <div class="w-25 text-center border-right pt-2">
+                        <h3 class="paid numbers">0</h3>
+                        <p class="border-top label">Paid</p>
+                    </div><!-- How Much Was Paid From Spin -->
+
+                    <div class="w-25 text-center pt-2">
+                        <h3 class="jackpot numbers">0</h3>
+                        <p class="border-top label">Jackpot</p>
+                    </div><!-- Jackpot Amount -->
+                </div><!-- Display Credits, Your Bet, Winnings, Jackpot -->
+            </section><!-- Machine Face -->
+
+<!-- Buttons at the bottom of the machine that controls the game play and gives information -->
+            <div id="gameBottom" class="px-4 py-3">
+                <div class="row mx-0 justify-content-around">
+                    <div class="align-self-center dropdown">
+                        <div id="menu" class="press dropdown-toggle border bg-secondary text-white rounded py-2 px-3" data-toggle="dropdown">Menu</div>
+                <!-- Dropdown Menu-menu -->
+                        <div class="dropdown-menu bg-dark text-white">
+                            <a class="menuList dropdown-item rounded" href="index.html">Home Page</a><!-- Return to home page link -->
+                            <a class="menuList gmInfo dropdown-item rounded" href="#">Game Info</a><!-- Link to bring up modal for the rules and guide to play the game -->
+                            <a class="menuList restart dropdown-item rounded" href="#">Reset</a><!-- Restart the game if need or want to -->
+                        </div><!-- Dropdown Menu-menu -->
+                    </div><!-- Dropdown Menu button -->
+
+                    <div class="align-self-center">
+                        <div id="betOne" class="press border bg-warning rounded py-2 px-3" data-toggle="tooltip" title="Press B key">Bet +1</div>
+                    </div><!-- Bet single credit button with tool-tip -->
+
+                    <div class="align-self-center">
+                        <div id="betTen" class="press border bg-warning rounded py-2 px-3" data-toggle="tooltip" title="Press N key">Bet +10</div>
+                    </div><!-- Bet ten credits button with tool-tip -->
+
+                    <div class="align-self-center">
+                        <div id="betAll" class="press border bg-warning rounded py-2 px-3" data-toggle="tooltip" title="Press M key">Bet All</div>
+                    </div><!-- Bet all credits button with tool-tip -->
+
+                    <div class="align-self-center">
+                        <div id="spin" class="press border bg-success text-white rounded p-4 mt-2 mt-sm-0" data-toggle="tooltip" title="Press Enter key">Spin</div><!-- Spin button to allow the game to start all its functioning -->
+                    </div>
+                </div>
+            </div><!-- Buttons container that control the game and menu -->
+        </div><!-- The Whole Slot Machine -->
+    </div><!-- Game Container -->
+
+<!-- Start modal at the load of the page -->     
+    <div class="modal fade" id="startModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-body text-white">
+                    <h5>Let the game Commence!</h5>
+                    <p>If you go back to home page this game will reset!!</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="playGame press btn btn-info" data-dismiss="modal">Play</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- Modal at the load to start the game -->
+
+<!-- Modal that holds the game information and game guide -->   
+    <div class="modal fade" id="infoModal">
+        <div class="modal-dialog">
+            <div class="modal-content gameInfo">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title text-white">Game Information</h4>
+                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+        
+                <!-- Modal body game information -->
+                <div class="modal-body">
+                    <div id="rules" class="text-center container rounded align-self-center">
+                        <h5>Match any 3 pictures the same and your bet is multiplied by the number it falls under. You can match in rows, columns, or criss cross diagonally. </h5><!-- Main concept of the game -->
+            
+                        <div class="d-flex flex-wrap justify-content-center mb-1">
+                            <img src="./slot_images/cherrys.png" alt="cherrys">
+                            <img src="./slot_images/plum.png" alt="plum">
+                            <img src="./slot_images/apple.png" alt="apple">
+                            <img src="./slot_images/lemon.png" alt="lemon">
+                            <img src="./slot_images/grapes.png" alt="grapes">
+                            <img src="./slot_images/orange.png" alt="orange">
+                            <img src="./slot_images/watermellon.png" alt="watermellon">
+                            <h5> x3 bet</h5>
+                        </div><!-- Fruits -->
+            
+                        <div class="d-flex justify-content-center mb-1">
+                            <img src="./slot_images/bell.png" alt="bell">
+                            <img src="./slot_images/clover.png" alt="clover">
+                            <img src="./slot_images/heart.png" alt="heart">
+                            <img src="./slot_images/horseShoe.png" alt="horseShoe">
+                            <h5> x5 bet</h5>
+                        </div><!-- heart, clover, bell, horeshoe -->
+            
+                        <div class="d-flex justify-content-center mb-1">
+                            <img src="./slot_images/diamond.png" alt="diamond">
+                            <img src="./slot_images/coin.png" alt="coin">
+                            <h5> x7 bet</h5>
+                        </div><!--diamond and coin-->
+            
+                        <div class="d-flex justify-content-center mb-1">
+                            <img src="./slot_images/bar.png" alt="bar">
+                            <img src="./slot_images/question.png" alt="question">
+                            <h5> x10 bet</h5>
+                        </div><!--bar and wild-->
+            
+                        <div class="d-flex justify-content-center">
+                            <img src="./slot_images/seven.png" alt="seven">
+                            <h5> JackPot x15 bet</h5>
+                        </div><!--7-->
+            
+                        <hr><!--underline-->
+            
+                        <div class="d-flex justify-content-center">
+                            <img src="./slot_images/question.png" alt="seven">
+                            <h5> = Wild</h5>
+                        </div><!--Wild-->
+            
+                        <div class="d-flex justify-content-center">
+                            <h5>Any 2 pictures plus <img src="./slot_images/question.png" alt="question"> in 1 line will equal the multiplier of the 2 pictures</h5>
+                        </div><!--How wild works-->
+            
+                        <div class="d-flex justify-content-center">
+                            <h5>Any 2 <img src="./slot_images/question.png" alt="question"> plus any picture will not win any credits</h5>
+                        </div><!--How wild works-->  
+
+                        <hr><!--underline-->
+                <!-- Information that the buttons also have keys that can be used instead -->
+                        <div>Keys to use instead of the mouse</div>
+
+                        <div class="d-flex">
+                            <div><span class="text-danger">Bet +1</span> = <span class="text-info">B</span> Key</div>
+                            <div><span class="text-danger">Bet +10</span> = <span class="text-info">N</span>Key</div>
+                            <div><span class="text-danger">Bet All</span> = <span class="text-info">M</span> Key</div>
+                            <div><span class="text-danger">Spin</span> = <span class="text-info">Enter</span> Key</div>
+                        </div><!-- Keyboard Instructions to the game -->
+                    </div><!-- Rules Container --> 
+                </div><!-- Info Modal Body -->
+            </div>
+        </div>
+    </div><!-- Information Modal for the game and what the betting buttons do -->
+
+<!-- Modal that plays a jackpot winning gif -->
+    <div class="modal fade" id="winModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-body">
+                    <img src="./slot_images/slots1.gif" alt="jackpot celebration">
+                </div>
+
+                <button type="button" class="close text-white jackClose" data-dismiss="modal">&times;</button>
+            </div>
+        </div>
+    </div><!-- Modal that plays a jackpot winning gif -->
+
+<!-- Modal that plays a losing gif -->
+    <div class="modal fade" id="loseModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-body">
+                    <img class="lost rounded img-fluid" src="./slot_images/lostAll.gif" alt="jackpot celebration">
+                </div>
+
+                <button type="button" class="restart btn btn-info" data-dismiss="modal">Restart Game</button>
+            </div>
+        </div>
+    </div><!-- Modal that plays a losing gif -->
+
+    <!-- Jquery -->
+    <script src="js/jquery3.4.0.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/slotmachine.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://static.tlmworks.org/track_1.0/cdns/bootstrap-4/css/bootstrap-4.1.3.min.css">
+    <!-- My CSS file -->
+    <link rel="stylesheet" href="css/slotmachine.css">
+    <title>Jelly Bean Casino</title>
+</head>
+
+<body id="main">
+    <div id="home">
+        <nav id="nvTop" class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top mx-0">
+            <p class="navbar-brand myBrand"><img class="img-fluid rounded" src="slot_images/logoCasino.png"> Jelly Bean Casino</p><!-- Nav Bar Brand that does not go anywhere -->
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button><!-- Button for menu when screen is smaller -->
+            
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="./slotmachine.html">Play</a><!-- Link to play the game on another page-->
+                    
+                    <a id="modalSign" class="nav-item nav-link infoTag" data-toggle="modal" data-target="regModal">Sign Up</a><!-- Link to sign up for an e-mail alert -->
+
+                    <a id="modalAbout" class="nav-item nav-link infoTag" data-toggle="modal" data-target="regModal">About</a><!-- Link to bring up a modal for about -->
+                </div><!-- Menu in Navbar --> 
+            </div><!-- Container for the links inside the navbar -->
+        </nav><!-- Collapsible Nav bar for home page -->
+
+<!-- About Modal -->
+        <div class="modal fade" id="aboutModal">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-white">About</h1>
+                    </div><!-- Title -->
+
+                    <div class="modal-body">
+                        <h5 class="text-white">My name is Justin Myers a.k.a 'Jelly Bean'. I enjoy playing gambling games and having a good time. I also do not like losing large sums of money either. So, I am building a site for those who want to gamble but, don't want to gamble with money. It is fit for all ages and all people. This site will be purely for fun and entertainment. I only hope that I can bring some happiness, joy, and pure enjoyment to all and anyone who loves these games as the games they are.</h5>
+                    </div><!-- Detail information of the about -->
+    
+                    <button type="button" class="close text-white mb-2" data-dismiss="modal">&times;</button><!-- Button to close the about modal -->
+                </div>
+            </div>
+        </div><!-- Modal that brings up About Us -->
+        
+<!-- Modal to sign up for an e-mail -->
+        <div id="regModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-white">Sign up to receive an e-mail for a week free of game play for the grand opening of Jelly Bean Casino!</h5>
+                        <button type="button" class="close mdlClose text-white" data-dismiss="modal">&times;</button>
+                    </div><!--Modal Header-->
+
+                    <div class="modal-body">
+                        <form action="#" class="needs-validated" id="replyEmail">
+                            <div class="form-group">
+                                <label for="name" class="text-white">Name:</label>
+                                <input type="name" class="form-control" id="names" placeholder="Enter Name" name="name" required autofocus>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div><!-- Input for entering name and has validation -->
+
+                            <div class="form-group">
+                                <label for="email" class="text-white">Email:</label>
+                                <input type="email" class="form-control" id="emails" placeholder="Enter Email" name="email" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                            </div><!-- Input for entering e-amail and has validation -->
+
+                            <button type="submit button" class="sub press btn btn-primary" data-toggle="modal">Submit</button><!-- Submit your email and name button -->
+                        </form><!-- Email and Name Sign Up for upcoming sight --> 
+                    </div><!--Modal Body-->
+                </div>
+            </div>
+        </div><!-- Modal sign up for E-mail -->
+
+<!-- Information on the upcoming casino sight just under the top navbar -->
+        <div class="info text-center">
+            <h1>Penny Slots Demo</h1>
+            <h5 class="px-2">Jelly Bean Casino is under construction and on behalf of us we have given you a demo of one game. Click play and enjoy this Slots game. If you like this game then you will like the rest of the site on the grand opening in early 2020. Just click sign up for an email and receive 1 week free of game play upon opening!!!!!</h5>
+        </div><!-- Information on the upcoming casino sight just under the top navbar -->
+
+<!-- Confirmation of the email and name for a reply email when sight is finished -->
+        <div id="confirmation" class="info container rounded text-center">
+            <h3>Thank You</h3>
+            <h5 id="conName" class="text-danger"></h5>
+            <h5 id="conEmail" class="text-danger"></h5>
+            <p class="px-2">You will receive an e-mail with the date that Jelly Bean Casino will be up and running. It will be a full online casino with games like Texas Holdem, Craps, Black Jack, and many more. Enjoy this demo of the Slots that will be a part of our Casino!</p>
+            <p>If your information is incorrect then just click sign up and re-submit your information. Enjoy our demo of Slots!</p>
+            <button type="button" autofocus id="conClose" class="btn btn-primary m-2 press">Close</button>
+        </div><!-- Confirmation of the email and name for a reply email when sight is finished -->
+
+<!-- How the slots game funcions and its rules -->
+        <div id="rules" class="text-center container rounded">
+            <h3>Slots Key</h3>
+            <h5>Match any 3 pictures the same and your bet is multiplied by the number it falls under. You can match in rows, columns, or criss cross diagonally. </h5>
+
+            <div class="d-flex flex-wrap justify-content-center mb-1">
+                <img src="./slot_images/cherrys.png" class="rounded" alt="cherrys">
+                <img src="./slot_images/plum.png" class="rounded" alt="plum">
+                <img src="./slot_images/apple.png" class="rounded" alt="apple">
+                <img src="./slot_images/lemon.png" class="rounded" alt="lemon">
+                <img src="./slot_images/grapes.png" class="rounded" alt="grapes">
+                <img src="./slot_images/orange.png" class="rounded" alt="orange">
+                <img src="./slot_images/watermellon.png" class="rounded" alt="watermellon">
+                <h5> x3 bet</h5>
+            </div><!-- Fruits -->
+
+            <div class="d-flex justify-content-center mb-1">
+                <img src="./slot_images/bell.png" class="rounded" alt="bell">
+                <img src="./slot_images/clover.png" class="rounded" alt="clover">
+                <img src="./slot_images/heart.png" class="rounded" alt="heart">
+                <img src="./slot_images/horseShoe.png" class="rounded" alt="horseShoe">
+                <h5> x5 bet</h5>
+            </div><!-- heart, clover, bell, horeshoe -->
+
+            <div class="d-flex justify-content-center mb-1">
+                <img src="./slot_images/diamond.png" class="rounded" alt="diamond">
+                <img src="./slot_images/coin.png" class="rounded" alt="coin">
+                <h5> x7 bet</h5>
+            </div><!--diamond and coin-->
+
+            <div class="d-flex justify-content-center mb-1">
+                <img src="./slot_images/bar.png" class="rounded" alt="bar">
+                <img src="./slot_images/question.png" class="rounded" alt="question">
+                <h5> x10 bet</h5>
+            </div><!--bar and wild-->
+
+            <div class="d-flex justify-content-center">
+                <img src="./slot_images/seven.png" class="rounded" alt="seven">
+                <h5> JackPot x15 bet</h5>
+            </div><!--7-->
+
+            <hr><!--underline-->
+
+            <div class="d-flex justify-content-center">
+                <img src="./slot_images/question.png" class="rounded" alt="seven">
+                <h5> = Wild</h5>
+            </div><!--Wild-->
+
+            <div class="d-flex justify-content-center">
+                <h5>Any 2 pictures plus <img src="./slot_images/question.png" class="rounded" alt="question"> in 1 line will equal the multiplier of the 2 pictures</h5>
+            </div><!--How wild works-->
+
+            <div class="d-flex justify-content-center">
+                <h5>Any 2 <img src="./slot_images/question.png" class="rounded" alt="question"> plus any picture will not win any credits</h5>
+            </div><!--How wild works-->  
+
+            <hr><!--underline-->
+    <!-- Information that the buttons also have keys that can be used instead -->
+            <div>Keys to use instead of the mouse</div>
+
+            <div class="d-flex justify-content-around">
+                <div><span class="text-danger">Bet +1</span> = <span class="text-info">B</span> Key,</div>
+                <div><span class="text-danger"> Bet +10</span> = <span class="text-info">N </span>Key,</div>
+                <div><span class="text-danger"> Bet All</span> = <span class="text-info">M</span> Key,</div>
+                <div><span class="text-danger"> Spin</span> = <span class="text-info">Enter</span> Key,</div>
+            </div><!--Keys information container-->
+        </div><!-- Rules Container Just under the upcoming website information --> 
+    </div><!-- Page Container -->
+
+    <nav id="nvBottom" class="navbar navbar-expand bg-dark navbar-dark justify-content-center">
+        <div class="navbar-nav ">
+            <a class="nav-item nav-link fa fa-facebook" href="https//www.facebook.com"></a><!-- Facebook link -->
+            <a class="nav-item nav-link fa fa-google" href="https//www.play.google.com"></a><!-- google playstore link -->
+            <a class="nav-item nav-link fa fa-apple" href="https//www.apple.com/ios/app.store"></a><!-- apple app store link -->
+            <a class="nav-item nav-link disabled fa fa-copyright" href="index.html">JellyBean Inc...</a><!-- Link that just goes to the same page because the website is under construction -->
+        </div>
+    </nav><!-- Bottom nav for ways to get more information and contact below the page container -->
+
+    <!-- Jquery -->
+    <script src="js/jquery3.4.0.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

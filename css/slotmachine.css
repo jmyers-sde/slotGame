@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Herculanum, sans-serif;
+}
+
+/* =================================Home Page================================== */
+
+#home{
+    background: url(../slot_images/slots4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.infoTag:hover{
+    cursor: pointer;
+}
+
+.info{
+    color: whitesmoke;
+    background-color: black;
+    opacity: .75;
+}
+
+#rules{
+    padding: 10px;
+    background-color: whitesmoke;
+    opacity: .75;
+    margin-top: 3.5%;
+    box-shadow: black 3px 3px 3px 3px;
+}
+
+.menuList{
+    color: whitesmoke;
+}
+
+#confirmation{
+    margin-top: 10%;
+}
+
+#nvBottom{
+    position: sticky;
+    bottom: 0px;
+}
+
+/* ==================================Slot Machine Page================================= */
+/* Game Page Container */
+#theContainer {
+    height: 100vh;
+    background: radial-gradient(blue, green);
+    background: url(../slot_images/slots1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* Game Info Modal */
+
+.gameInfo{
+    background: url(../slot_images/slots2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/*=========== The Slot Machine ==========*/
+
+#page{
+    box-shadow: 10px 10px 10px 10px;
+}
+
+/* Machine Top */
+
+#gameTop {
+    background: url(../slot_images/flames.png) no-repeat;
+    background-size: 100% 100%;
+    border: rgb(255, 217, 6) solid 5px;
+    border-style: outset;
+    border-width: 15px 8px 15px 8px;
+}
+
+#slt {
+    height: 75px;
+    color: black; 
+}
+
+#soundOnOff {
+    height: 100px;
+    width: 100px;
+}
+    #soundOnOff:hover{
+        cursor: pointer;
+    }
+
+#effectsOnOff {
+    height: 100px;
+    width: 100px;
+}
+    #effectsOnOff:hover{
+        cursor: pointer;
+    }
+
+/* Machine Game Face */
+
+#game{
+    color: whitesmoke;
+    background-color: black;
+    border: rgb(254, 102, 4) solid 30px;
+    border-style: inset;
+}
+
+.reelContents{
+    height: 33.25%;
+}
+
+#reels{
+    height: 29vh;
+    background-color: white;
+}
+
+.numbers{
+    font-size: 15px;
+}
+
+.label{
+    font-size: 15;
+}
+
+/* Game Bottom */
+
+#gameBottom {
+    background-color: black;
+    border: rgb(255, 217, 6) solid 10px;   
+    border-style: ridge;
+}
+
+.press:hover {
+    cursor: pointer;
+    box-shadow: white 3px 3px 3px 3px;
+}
+.press:active{
+    box-shadow: none;
+    transform: translateX(5px) translateY(5px);
+}
+
+#affectOn{
+    color: orangered;
+}
+
+#backgroundOn {
+    color: orangered;
+}
+
+.lost{
+    margin-left: 25%;
+}
+
+/* =====keyframes======= */
+
+/* fading the pages when they are loaded */
+body{
+    animation: fade 1500ms linear;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Applied Classe for wins */
+
+.winLight{
+    background: repeating-radial-gradient(100px 50px, purple, gold 20%, green 40%, purple 60%, yellow 80%, indigo) no-repeat;
+    background-size: 100% 100%;;
+    animation: fadeaway 2s linear; 
+    animation-iteration-count: infinite;
+}
+
+/* Animation of the rows, columns, and diaganals when you win */
+
+@keyframes fadeaway{
+    0%{background: repeating-radial-gradient(100px 50px, purple, gold 20%, green 40%, purple 60%, yellow 80%, indigo) no-repeat;
+        background-size: 100% 100%;}
+    4.167%{background: repeating-radial-gradient(100px 50px, gold, green 20%, purple 40%, yellow 60%, indigo 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    8.334%{background: repeating-radial-gradient(100px 50px, green, purple 20%, yellow 40%, indigo 60%, purple 80%, gold) no-repeat;
+        background-size: 100% 100%;}
+    12.501%{background: repeating-radial-gradient(100px 50px, purple, yellow 20%, indigo 40%, purple 60%, gold 80%, green) no-repeat;
+        background-size: 100% 100%;}
+    16.668%{background: repeating-radial-gradient(100px 50px, yellow, indigo 20%, purple 40%, gold 60%, green 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    20.835%{background: repeating-radial-gradient(100px 50px, indigo, purple 20%, gold 40%, green 60%, purple 80%, yellow) no-repeat;
+        background-size: 100% 100%;}
+
+    25.002%{background: repeating-radial-gradient(100px 50px, purple, gold 20%, green 40%, purple 60%, yellow 80%, indigo) no-repeat;
+        background-size: 100% 100%;}
+    29.169%{background: repeating-radial-gradient(100px 50px, gold, green 20%, purple 40%, yellow 60%, indigo 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    33.336%{background: repeating-radial-gradient(100px 50px, green, purple 20%, yellow 40%, indigo 60%, purple 80%, gold) no-repeat;
+        background-size: 100% 100%;}
+    37.503%{background: repeating-radial-gradient(100px 50px, purple, yellow 20%, indigo 40%, purple 60%, gold 80%, green) no-repeat;
+        background-size: 100% 100%;}
+    41.67%{background: repeating-radial-gradient(100px 50px, yellow, indigo 20%, purple 40%, gold 60%, green 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    45.837%{background: repeating-radial-gradient(100px 50px, indigo, purple 20%, gold 40%, green 60%, purple 80%, yellow) no-repeat;
+        background-size: 100% 100%;}
+
+    50.004%{ background: repeating-radial-gradient(100px 50px, purple, gold 20%, green 40%, purple 60%, yellow 80%, indigo) no-repeat;
+        background-size: 100% 100%;}
+    54.171%{background: repeating-radial-gradient(100px 50px, gold, green 20%, purple 40%, yellow 60%, indigo 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    58.338%{background: repeating-radial-gradient(100px 50px, green, purple 20%, yellow 40%, indigo 60%, purple 80%, gold) no-repeat;
+        background-size: 100% 100%;}
+    62.505%{background: repeating-radial-gradient(100px 50px, purple, yellow 20%, indigo 40%, purple 60%, gold 80%, green) no-repeat;
+        background-size: 100% 100%;}
+    66.672%{background: repeating-radial-gradient(100px 50px, yellow, indigo 20%, purple 40%, gold 60%, green 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    70.839%{background: repeating-radial-gradient(100px 50px, indigo, purple 20%, gold 40%, green 60%, purple 80%, yellow) no-repeat;
+        background-size: 100% 100%;}
+
+    75.006%{background: repeating-radial-gradient(100px 50px, purple, gold 20%, green 40%, purple 60%, yellow 80%, indigo) no-repeat;
+        background-size: 100% 100%;}
+    79.173%{background: repeating-radial-gradient(100px 50px, gold, green 20%, purple 40%, yellow 60%, indigo 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    83.34%{background: repeating-radial-gradient(100px 50px, green, purple 20%, yellow 40%, indigo 60%, purple 80%, gold) no-repeat;
+        background-size: 100% 100%;}  
+    87.507%{background: repeating-radial-gradient(100px 50px, purple, yellow 20%, indigo 40%, purple 60%, gold 80%, green) no-repeat;
+        background-size: 100% 100%;}
+    91.674%{background: repeating-radial-gradient(100px 50px, yellow, indigo 20%, purple 40%, gold 60%, green 80%, purple) no-repeat;
+        background-size: 100% 100%;}
+    95.841%{background: repeating-radial-gradient(100px 50px, indigo, purple 20%, gold 40%, green 60%, purple 80%, yellow) no-repeat;
+        background-size: 100% 100%;}  
+}
+
+/* === Reels animating through pics === */
+
+/* Reel 1 */
+.rollReels1{
+    background: url(../slot_images/slot_pics.png) no-repeat 50% 0px;
+    background-size: 55% 1500%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 2 */
+.rollReels2{
+    background: url(../slot_images/slot_pics2.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 3 */
+.rollReels3{
+    background: url(../slot_images/slot_pics3.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 4 */
+.rollReels4{
+    background: url(../slot_images/slot_pics4.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 5 */
+.rollReels5{
+    background: url(../slot_images/slot_pics5.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 6 */
+.rollReels6{
+    background: url(../slot_images/slot_pics6.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 7 */
+.rollReels7{
+    background: url(../slot_images/slot_pics7.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 8 */
+.rollReels8{
+    background: url(../slot_images/slot_pics8.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+/* Reel 9 */
+.rollReels9{
+    background: url(../slot_images/slot_pics9.png) no-repeat 50% 0px;
+    background-size: 55% 1555%;
+    animation-name: rollingReels;
+    animation-duration: 1500ms;
+    animation-timing-function: steps(16, end);
+    animation-iteration-count: infinite;
+}
+
+@keyframes rollingReels {
+    from {
+        background-position: 50% 0%;
+    }
+    to {
+        background-position: 50% 100%;
+    }
+}
+/* =================== Media Queries ================= */
+
+@media only screen and (min-width: 768px){
+
+/* Home Page */
+
+    #main{
+        height: 100vh;
+        background: url(../slot_images/slots4.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    #nvBottom{
+        position: sticky;
+        top: 100%;
+    }
+
+/* Game Page */
+
+/* Reel 1 */
+    .rollReels1{
+        background: url(../slot_images/slot_pics.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 2 */
+    .rollReels2{
+        background: url(../slot_images/slot_pics2.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 3 */
+    .rollReels3{
+        background: url(../slot_images/slot_pics3.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 4 */
+    .rollReels4{
+        background: url(../slot_images/slot_pics4.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 5 */
+    .rollReels5{
+        background: url(../slot_images/slot_pics5.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 6 */
+    .rollReels6{
+        background: url(../slot_images/slot_pics6.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 7 */
+    .rollReels7{
+        background: url(../slot_images/slot_pics7.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 8 */
+    .rollReels8{
+        background: url(../slot_images/slot_pics8.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+/* Reel 9 */
+    .rollReels9{
+        background: url(../slot_images/slot_pics9.png) no-repeat 50% 0%;
+        animation-name: rollingReels;
+        background-size: 28% 1555%;
+        animation-duration: 1500ms;
+        animation-timing-function: steps(16, end);
+        animation-iteration-count: infinite;
+    }
+}
+
+/* Game Page */
+
+@media only screen and (min-width: 992px){
+    /* Machine Bottom */
+    .numbers{
+        font-size: 25px;
+    }
+
+    .label{
+        font-size: 25px;
+    }
+}
